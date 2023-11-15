@@ -405,25 +405,25 @@ modbus:
     port: 2020
     name: "modbus_hub"
     binary_sensors:
-      - name: binary_sensor1
+      - name: "binary_sensor1"
         address: 100
     climates:
       - name: "Watlow F4T"
         address: 200
     covers:
-      - name: Door1
+      - name: "Door1"
         address: 300
     fans:
-      - name: Fan1
+      - name: "Fan1"
         address: 400
     lights:
-      - name: light1
+      - name: "light1"
         address: 500
     sensors:
-      - name: sensor1
+      - name: "sensor1"
         address: 600
     switches:
-      - name: Switch1
+      - name: "Switch1"
         address: 700
 ```
 
@@ -489,7 +489,7 @@ modbus:
     host: IP_ADDRESS
     port: 502
     binary_sensors:
-      - name: my_relay
+      - name: "my_relay"
         address: 100
         slave: 1
 ```
@@ -504,7 +504,7 @@ modbus:
     host: IP_ADDRESS
     port: 502
     binary_sensors:
-      - name: my_relay
+      - name: "my_relay"
         address: 100
         device_class: door
         input_type: coil
@@ -525,7 +525,7 @@ modbus:
     host: IP_ADDRESS
     port: 502
     binary_sensors:
-      - name: my_relay
+      - name: "my_relay"
         address: 100
         slave: 1
         slave_count: 10
@@ -848,7 +848,7 @@ modbus:
     host: IP_ADDRESS
     port: 502
     covers:
-      - name: Door1
+      - name: "Door1"
         device_class: door
         input_type: coil
         address: 117
@@ -874,12 +874,12 @@ modbus:
     host: IP_ADDRESS
     port: 502
     covers:
-      - name: Door1
+      - name: "Door1"
         slave: 1
         coil: 1
         device_class: door
         scan_interval: 10
-      - name: Door2
+      - name: "Door2"
         slave: 2
         coil: 2
         device_class: door
@@ -897,7 +897,7 @@ modbus:
     host: IP_ADDRESS
     port: 502
     covers:
-      - name: Door1
+      - name: "Door1"
         slave: 1
         device_class: door
         scan_interval: 10
@@ -921,7 +921,7 @@ modbus:
     host: IP_ADDRESS
     port: 502
     covers:
-      - name: Door1
+      - name: "Door1"
         slave: 1
         device_class: door
         scan_interval: 10
@@ -938,13 +938,13 @@ This example shows a configuration for a Modbus cover controlled using a holding
 
 ```yaml
 modbus:
-  - name: hub1
+  - name: "hub1"
     type: tcp
     host: IP_ADDRESS
     port: 502
 
     covers:
-      - name: Door1
+      - name: "Door1"
         slave: 1
         device_class: door
         scan_interval: 10
@@ -1336,15 +1336,15 @@ modbus:
     host: IP_ADDRESS
     port: 502
     sensors:
-      - name: Sensor1
+      - name: "Sensor1"
         unit_of_measurement: °C
         slave: 1
         address: 100
-      - name: Sensor2
+      - name: "Sensor2"
         unit_of_measurement: mg
         address: 110
         count: 2
-      - name: Sensor3
+      - name: "Sensor3"
         unit_of_measurement: °C
         slave: 1
         address: 120
@@ -1367,7 +1367,7 @@ modbus:
     host: IP_ADDRESS
     port: 502
     sensors:
-      - name: Room_1
+      - name: "Room_1"
         slave: 10
         address: 0
         input_type: holding
@@ -1469,15 +1469,15 @@ modbus:
     host: IP_ADDRESS
     port: 502
     switches:
-      - name: Switch1
+      - name: "Switch1"
         address: 13
         write_type: coil
-      - name: Switch2
+      - name: "Switch2"
         slave: 2
         address: 14
         write_type: coil
         verify:
-      - name: Register1
+      - name: "Register1"
         address: 11
         command_on: 1
         command_off: 0
@@ -1498,15 +1498,15 @@ modbus:
     host: IP_ADDRESS
     port: 502
     switches:
-      - name: Switch1
+      - name: "Switch1"
         address: 13
         write_type: coil
-      - name: Switch2
+      - name: "Switch2"
         slave: 2
         address: 14
         write_type: coil
         verify:
-      - name: Register1
+      - name: "Register1"
         address: 11
         command_on: 1
         command_off: 0
